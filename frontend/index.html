@@ -1,0 +1,17 @@
+---
+layout: base
+---
+<form action="{{ site.apiurl }}/secret-santa" method="POST" class="secret-form">
+	{% for i in (0..2) %}
+		<div class="secret-person">
+			<label for="name{{ i }}" class="secret-label">Name</label>
+			<input required type="text" name="name{{ i }}" class="secret-name" placeholder="Juanito Perez">
+			<label for="email{{ i }}">Correo</label>
+			<input required type="email" name="email{{ i }}" class="secret-email" placeholder="juanito.perez@email.com">
+			<button type="button">❌</button>
+		</div>
+	{% endfor %}
+
+	<button type="button" id="add-secret">+ Añadir Persona</button>
+	<button type="submit" id="add-secret">Generar santas secretos 😈</button>
+</form>
