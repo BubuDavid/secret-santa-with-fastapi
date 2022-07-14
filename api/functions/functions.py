@@ -43,7 +43,7 @@ def send_secret_santas(people: list[Person]):
 					name = search.name
 					break
 			message = f"""
-Hola! Te toca {name}, feliz navidad y joto el que lo lea.
+Hola! Te toca {name}, feliz navidad..
 			"""
 			
 			server.sendmail(email, receiver_email, message)
